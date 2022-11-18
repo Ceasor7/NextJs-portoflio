@@ -25,8 +25,8 @@ export default function Home() {
   const { size, elapsed, percentage, download, cancel, error, isInProgress } =
     useDownloader();
 
-  const fileUrl = '/JGK.pdf';
-  const filename = 'JGK.pdf';
+  const fileUrl = '/Joseph Gateru Resume.pdf';
+  const filename = 'Joseph Gateru Resume.pdf';
 
   return (
     <div className={darkMode ? 'dark' : ''}>
