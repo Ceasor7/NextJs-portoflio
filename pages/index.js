@@ -68,11 +68,17 @@ export default function Home() {
               needs. Join me down below and let's get cracking!
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <AiFillTwitterCircle className="cursor-pointer animate-bounce" />
-              <AiFillLinkedin className="cursor-pointer animate-bounce" />
+              <AiFillTwitterCircle
+                className="cursor-pointer animate-bounce"
+                href="https://twitter.com/JoseGee19"
+              />
+              <AiFillLinkedin
+                className="cursor-pointer animate-bounce"
+                href="https://www.linkedin.com/in/joseph-gateru-188909255/"
+              />
               <AiFillYoutube className="cursor-pointer animate-bounce" />
             </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
+            <div className=" flex justify-center mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
               <Image
                 src={josegee}
                 layout="fill"
@@ -114,11 +120,16 @@ export default function Home() {
                 alt="Beuatiful dsigns"
               />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Beautiful Designs
+                Creating Beautiful Design for your Web Application
               </h3>
               <p className="py-2">
                 Creating elegant designs suited for your needs following core
-                design theory.
+                design theory. Exploring various Design features suitable for
+                the project.<br></br>
+                <span>
+                  Depending on the user needs different designs will bring
+                  effeciency and Easy usage to the user
+                </span>
               </p>
               <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
               <p className="text-gray-800 py-1">Photoshop</p>
@@ -174,7 +185,7 @@ export default function Home() {
                 alt="project deployment"
               />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
-                Project Deployment
+                Project Testing and Maintance
               </h3>
               <p className="py-2">
                 Are you interested in feedback for your current project? I can
