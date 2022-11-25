@@ -3,21 +3,24 @@ import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillYoutube,
+  AiFillInstagram,
 } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
-import code from '../public/code.png';
-import design from '../public/design.png';
-import consulting from '../public/consulting.png';
+import code1 from '../public/code1.png';
+import design1 from '../public/design1.png';
+
 import Image from 'next/legacy/image';
-import web1 from '../public/web1.png';
-import web2 from '../public/web2.png';
-import web3 from '../public/web3.png';
-import web4 from '../public/web4.png';
+import chat1 from '../public/chat1.png';
+import chat2 from '../public/chat2.png';
+import chat3 from '../public/chat3.png';
+import chat4 from '../public/chat4.png';
 import web5 from '../public/web5.png';
 import web6 from '../public/web6.png';
 import josegee from '../public/josegee.png';
 import useDownloader from 'react-use-downloader';
+import deployment1 from '../public/deployment1.png';
+import technical from '../public/technical.png';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -64,21 +67,16 @@ export default function Home() {
               Developer and designer.
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              Freelancer providing services for programming and design content
-              needs. Join me down below and let's get cracking!
+              Hey there, I'm a Web Developer providing services for programming
+              and design content needs with the Latest web technologies. Join me
+              down below and let's get cracking!
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <AiFillTwitterCircle
-                className="cursor-pointer animate-bounce"
-                href="https://twitter.com/JoseGee19"
-              />
-              <AiFillLinkedin
-                className="cursor-pointer animate-bounce"
-                href="https://www.linkedin.com/in/joseph-gateru-188909255/"
-              />
-              <AiFillYoutube className="cursor-pointer animate-bounce" />
+              <AiFillTwitterCircle className="shadow-2xl cursor-pointer animate-bounce" />
+              <AiFillLinkedin className="shadow-2xl cursor-pointer animate-bounce" />
+              <AiFillInstagram className="shadow-2xl cursor-pointer animate-bounce" />
             </div>
-            <div className=" flex justify-center mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
+            <div className=" flex justify-center mx-auto bg-gradient-to-b shadow-2xl from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-60 md:w-60">
               <Image
                 src={josegee}
                 layout="fill"
@@ -95,8 +93,8 @@ export default function Home() {
               I'm a Junior web developer who is still learning new technologies
               required to solve problems of experience into Designing,
               Development and deployment of Web appication.
-              <span className="text-teal-500"> A Freelancer </span> who has
-              expertise in
+              <span className="text-teal-500"> A FullStack developer </span> who
+              has expertise in
               <span className="text-teal-500"> Javascript, </span>
               <span className="text-teal-500"> Next.Js, </span>
               <span className="text-teal-500"> React.Js, </span>
@@ -111,35 +109,31 @@ export default function Home() {
               development/programming and deployment.
             </p>
           </div>
-          <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+          <div className="lg:flex gap-3">
+            <div className="text-center shadow-2xl p-10 rounded-xl my-10  dark:bg-white flex-1">
               <Image
-                src={design}
+                src={design1}
                 width={100}
                 height={100}
                 alt="Beuatiful dsigns"
               />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Creating Beautiful Design for your Web Application
+                Beautiful Design for your Web Application
               </h3>
               <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory. Exploring various Design features suitable for
-                the project.<br></br>
-                <span>
-                  Depending on the user needs different designs will bring
-                  effeciency and Easy usage to the user
-                </span>
+                Creating eye catching designs suited for the user neds.
+                following core design theory. Exploring various Design features
+                suitable for the project.<br></br>
               </p>
               <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
               <p className="text-gray-800 py-1">Photoshop</p>
               <p className="text-gray-800 py-1">Illustrator</p>
               <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
+              <p className="text-gray-800 py-1">Canva</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-2xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
-                src={code}
+                src={code1}
                 width={100}
                 height={100}
                 alt="Code your dream project"
@@ -149,23 +143,25 @@ export default function Home() {
               </h3>
               <p className="py-2">
                 Do you have an idea for your next great website? Let's make it a
-                reality.
+                reality. Using the Latest web technolgies Like NextJs, ReactJs
+                your project will be Fast, Reliable by the use of API's.
+                intergrated with databases like MongoDb and Firebase.
               </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
+              <h4 className="py-4 text-teal-600">Programming Tools I Use</h4>
+              <p className="text-gray-800 py-1">Visual studio code</p>
+              <p className="text-gray-800 py-1">Visual studio basic</p>
+              <p className="text-gray-800 py-1">Sublime text</p>
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-2xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
-                src={consulting}
+                src={deployment1}
                 width={100}
                 height={100}
                 alt="project deployment"
               />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
-                Project Deployment
+                Project Deployment and Maintance
               </h3>
               <p className="py-2">
                 Are you interested in feedback for your current project? I can
@@ -177,15 +173,15 @@ export default function Home() {
               <p className="text-gray-800 py-1">Figma</p>
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-2xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
-                src={consulting}
+                src={technical}
                 width={100}
                 height={100}
                 alt="project deployment"
               />
               <h3 className="text-lg font-medium pt-8 pb-2 ">
-                Project Testing and Maintance
+                Techincal support and consultation
               </h3>
               <p className="py-2">
                 Are you interested in feedback for your current project? I can
@@ -222,7 +218,7 @@ export default function Home() {
                 width={'100%'}
                 height={'100%'}
                 layout="responsive"
-                src={web1}
+                src={chat1}
                 alt="project1"
               />
             </div>
@@ -232,7 +228,7 @@ export default function Home() {
                 width={'100%'}
                 height={'100%'}
                 layout="responsive"
-                src={web2}
+                src={chat4}
                 alt="project2"
               />
             </div>
@@ -242,7 +238,7 @@ export default function Home() {
                 width={'100%'}
                 height={'100%'}
                 layout="responsive"
-                src={web3}
+                src={chat2}
                 alt="project3"
               />
             </div>
@@ -252,7 +248,7 @@ export default function Home() {
                 width={'100%'}
                 height={'100%'}
                 layout="responsive"
-                src={web4}
+                src={chat4}
                 alt="project4"
               />
             </div>
