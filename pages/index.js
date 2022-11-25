@@ -9,7 +9,6 @@ import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
 import code1 from '../public/code1.png';
 import design1 from '../public/design1.png';
-
 import Image from 'next/legacy/image';
 import chat1 from '../public/chat1.png';
 import chat2 from '../public/chat2.png';
@@ -248,7 +247,7 @@ export default function Home() {
                 width={'100%'}
                 height={'100%'}
                 layout="responsive"
-                src={chat4}
+                src={chat3}
                 alt="project4"
               />
             </div>
