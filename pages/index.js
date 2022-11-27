@@ -77,34 +77,44 @@ export default function Home() {
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
               Hey there, I'm a Web Developer providing services for programming
-              and design content needs with the Latest web technologies. Join me
-              down below and let's get cracking!
+              and design content needs using the Latest web technologies. Join
+              me down below and let's get cracking!
             </p>
-            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+            <div className="flex justify-center gap-16 text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl ">
               <a href="mailto:josephkgateru@gmail.com">
                 {' '}
-                <AiFillMail className="shadow-2xl cursor-pointer animate-bounce" />{' '}
-                <span className="text-xl justify-center">Email</span>
+                <AiFillMail className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
+                <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+                  Email
+                </span>
               </a>
               <a href="tel:0708234571">
                 {' '}
-                <AiFillPhone className="shadow-2xl cursor-pointer animate-bounce" />{' '}
-                <span className="text-xl justify-center">Call </span>
+                <AiFillPhone className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
+                <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+                  Call{' '}
+                </span>
               </a>
               <a href="https://twitter.com/JoseGee19">
                 {' '}
-                <AiFillTwitterCircle className="shadow-2xl cursor-pointer animate-bounce" />{' '}
-                <span className="text-xl justify-center">Twitter</span>
+                <AiFillTwitterCircle className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
+                <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+                  Twitter
+                </span>
               </a>
               <a href="https://www.linkedin.com/in/joseph-gateru-188909255/">
                 {' '}
-                <AiFillLinkedin className="shadow-2xl justify-center cursor-pointer animate-bounce " />{' '}
-                <span className="text-xl justify-center">Linkedin</span>
+                <AiFillLinkedin className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce " />{' '}
+                <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+                  Linkedin
+                </span>
               </a>
               <a href="https://www.instagram.com/aj_kim_jnr/">
                 {' '}
-                <AiFillInstagram className="shadow-2xl justify-center cursor-pointer animate-bounce" />{' '}
-                <span className="text-xl justify-center">Instagram</span>
+                <AiFillInstagram className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
+                <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+                  Instagram
+                </span>
               </a>
             </div>
             <div className=" flex justify-center mx-auto bg-gradient-to-b shadow-2xl from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-60 md:w-60">
