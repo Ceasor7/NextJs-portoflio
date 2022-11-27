@@ -4,25 +4,34 @@ import {
   AiFillLinkedin,
   AiFillYoutube,
   AiFillInstagram,
+  AiFillMessage,
+  AiFillPhone,
+  AiFillMail,
 } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
-import code1 from '../public/code1.png';
-import design1 from '../public/design1.png';
+import coding from '../public/coding.png';
+import designing from '../public/designing.png';
 import Image from 'next/legacy/image';
 import chat1 from '../public/chat1.PNG';
 import chat2 from '../public/chat2.PNG';
 import chat3 from '../public/chat3.PNG';
 import chat4 from '../public/chat4.PNG';
-import web5 from '../public/web5.png';
-import web6 from '../public/web6.png';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 import josegee from '../public/josegee.png';
 import useDownloader from 'react-use-downloader';
-import deployment1 from '../public/deployment1.png';
-import technical from '../public/technical.png';
+import deployment from '../public/deployment.png';
+import support from '../public/support.png';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+
+  const handleChange = () => {
+    setChecked(!checked);
+  };
 
   const { size, elapsed, percentage, download, cancel, error, isInProgress } =
     useDownloader();
@@ -41,6 +50,7 @@ export default function Home() {
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
             <h1 className="font-burtons text-xl">Joseph Gateru</h1>
+
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -71,9 +81,31 @@ export default function Home() {
               down below and let's get cracking!
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <AiFillTwitterCircle className="shadow-2xl cursor-pointer animate-bounce" />
-              <AiFillLinkedin className="shadow-2xl cursor-pointer animate-bounce" />
-              <AiFillInstagram className="shadow-2xl cursor-pointer animate-bounce" />
+              <a href="mailto:josephkgateru@gmail.com">
+                {' '}
+                <AiFillMail className="shadow-2xl cursor-pointer animate-bounce" />{' '}
+                <span className="text-xl justify-center">Email</span>
+              </a>
+              <a href="tel:0708234571">
+                {' '}
+                <AiFillPhone className="shadow-2xl cursor-pointer animate-bounce" />{' '}
+                <span className="text-xl justify-center">Call </span>
+              </a>
+              <a href="https://twitter.com/JoseGee19">
+                {' '}
+                <AiFillTwitterCircle className="shadow-2xl cursor-pointer animate-bounce" />{' '}
+                <span className="text-xl justify-center">Twitter</span>
+              </a>
+              <a href="https://www.linkedin.com/in/joseph-gateru-188909255/">
+                {' '}
+                <AiFillLinkedin className="shadow-2xl justify-center cursor-pointer animate-bounce " />{' '}
+                <span className="text-xl justify-center">Linkedin</span>
+              </a>
+              <a href="https://www.instagram.com/aj_kim_jnr/">
+                {' '}
+                <AiFillInstagram className="shadow-2xl justify-center cursor-pointer animate-bounce" />{' '}
+                <span className="text-xl justify-center">Instagram</span>
+              </a>
             </div>
             <div className=" flex justify-center mx-auto bg-gradient-to-b shadow-2xl from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-60 md:w-60">
               <Image
@@ -111,7 +143,7 @@ export default function Home() {
           <div className="lg:flex gap-3">
             <div className="text-center shadow-2xl p-10 rounded-xl my-10  dark:bg-white flex-1">
               <Image
-                src={design1}
+                src={designing}
                 width={100}
                 height={100}
                 alt="Beuatiful dsigns"
@@ -132,7 +164,7 @@ export default function Home() {
             </div>
             <div className="text-center shadow-2xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
-                src={code1}
+                src={coding}
                 width={100}
                 height={100}
                 alt="Code your dream project"
@@ -154,7 +186,7 @@ export default function Home() {
             </div>
             <div className="text-center shadow-2xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
-                src={deployment1}
+                src={deployment}
                 width={100}
                 height={100}
                 alt="project deployment"
@@ -174,7 +206,7 @@ export default function Home() {
             </div>
             <div className="text-center shadow-2xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
-                src={technical}
+                src={support}
                 width={100}
                 height={100}
                 alt="project deployment"
@@ -211,66 +243,32 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 ">
-              <Image
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-                src={chat1}
-                alt="project1"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-                src={chat4}
-                alt="project2"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-                src={chat2}
-                alt="project3"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-                src={chat3}
-                alt="project4"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-                src={web5}
-                alt="project5"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-                src={web6}
-                alt="project6"
-              />
-            </div>
+            <Carousel>
+              <div>
+                <img src="/chat1.png" alt="image1" />
+                <p className="bg-gradient-to-r from-cyan-500 text- to-teal-500  text-white py-2 border-none rounded-md ml-8 ">
+                  Default page to show all posts made by different users
+                </p>
+              </div>
+              <div>
+                <img src="/chat2.png" alt="image2" />
+                <p className="bg-gradient-to-r from-cyan-500 text- to-teal-500  text-white px-4 py-2 border-none rounded-md ml-8">
+                  User Can Post or Edit a Post
+                </p>
+              </div>
+              <div>
+                <img src="/chat3.png" alt="image3" />
+                <p className="bg-gradient-to-r from-cyan-500 text- to-teal-500  text-white px-4 py-2 border-none rounded-md ml-8">
+                  User Dashboard
+                </p>
+              </div>
+              <div>
+                <img src="/chat4.png" alt="image4" />
+                <p className="bg-gradient-to-r from-cyan-500 text- to-teal-500  text-white px-4 py-2 border-none rounded-md ml-8">
+                  User Authentication with Google
+                </p>
+              </div>
+            </Carousel>
           </div>
         </section>
       </main>
