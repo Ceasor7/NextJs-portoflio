@@ -9,22 +9,19 @@ import {
   AiFillMail,
 } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { useState } from 'react';
 import coding from '../public/coding.png';
 import designing from '../public/designing.png';
 import Image from 'next/legacy/image';
-import chat1 from '../public/chat1.PNG';
-import chat2 from '../public/chat2.PNG';
-import chat3 from '../public/chat3.PNG';
-import chat4 from '../public/chat4.PNG';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
-import josegee from '../public/josegee.png';
 import useDownloader from 'react-use-downloader';
 import deployment from '../public/deployment.png';
 import support from '../public/support.png';
+import joseg from '../public/joseg.jpg';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import React, { useState, useEffect } from 'react';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -38,6 +35,20 @@ export default function Home() {
 
   const fileUrl = '/Joseph Gateru Resume.pdf';
   const filename = 'Joseph Gateru Resume.pdf';
+
+  const [index, setIndex] = useState(0);
+  const images = [
+    { src: '/chat1.PNG', url: 'https://example1.com' },
+    { src: '/chat2.PNG', url: 'https://example2.com' },
+    { src: '/chat3.PNG', url: 'https://example3.com' },
+  ];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div className={darkMode ? 'dark' : ''}>
@@ -119,7 +130,7 @@ export default function Home() {
             </div>
             <div className=" flex justify-center mx-auto bg-gradient-to-b shadow-2xl from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-60 md:w-60">
               <Image
-                src={josegee}
+                src={joseg}
                 layout="fill"
                 objectFit="cover"
                 alt="profile picture"
@@ -162,15 +173,18 @@ export default function Home() {
                 Beautiful Design for your Web Application
               </h3>
               <p className="py-2">
-                Creating eye catching designs suited for the user neds.
+                Creating eye catching designs suited for the user needs.
                 following core design theory. Exploring various Design features
                 suitable for the project.<br></br>
               </p>
               <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
+              <p className="text-gray-800 py-1">Adobe Photoshop</p>
+              <p className="text-gray-800 py-1">Sketch</p>
+              <p className="text-gray-800 py-1">AdobeXD</p>
               <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Canva</p>
+              <p className="text-gray-800 py-1">Invision studio</p>
+              <p className="text-gray-800 py-1">Corel Draw</p>
+              <p className="text-gray-800 py-1">GIMP</p>
             </div>
             <div className="text-center shadow-2xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image
@@ -238,7 +252,9 @@ export default function Home() {
         </section>
         <section className="py-10">
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
+            <h3 className="text-3xl py-1 dark:text-white ">
+              Projects completed
+            </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Since the beginning of my journey as a freelance designer and
               developer, I've done remote work for
@@ -253,32 +269,20 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <Carousel>
-              <div>
-                <img src="/chat1.png" alt="image1" />
-                <p className="bg-gradient-to-r from-cyan-500 text- to-teal-500  text-white py-2 border-none rounded-md ml-8 ">
-                  Default page to show all posts made by different users
-                </p>
+            <h3 className="text-2xl py-1 dark:text-white ">
+              Random thoughts site
+            </h3>
+            <div className="lg:flex gap-3">
+              <div className="text-center shadow-2xl p-10 rounded-xl my-10  dark:bg-white flex-1">
+                <h4>Click to view</h4>
+                <div>
+                  <img
+                    src={images[index].src}
+                    onClick={() => window.open(images[index].url)}
+                  />
+                </div>
               </div>
-              <div>
-                <img src="/chat2.png" alt="image2" />
-                <p className="bg-gradient-to-r from-cyan-500 text- to-teal-500  text-white px-4 py-2 border-none rounded-md ml-8">
-                  User Can Post or Edit a Post
-                </p>
-              </div>
-              <div>
-                <img src="/chat3.png" alt="image3" />
-                <p className="bg-gradient-to-r from-cyan-500 text- to-teal-500  text-white px-4 py-2 border-none rounded-md ml-8">
-                  User Dashboard
-                </p>
-              </div>
-              <div>
-                <img src="/chat4.png" alt="image4" />
-                <p className="bg-gradient-to-r from-cyan-500 text- to-teal-500  text-white px-4 py-2 border-none rounded-md ml-8">
-                  User Authentication with Google
-                </p>
-              </div>
-            </Carousel>
+            </div>
           </div>
         </section>
       </main>
