@@ -39,8 +39,11 @@ export default function Home() {
   const [index, setIndex] = useState(0);
   const images = [
     { src: '/chat1.PNG', url: 'https://example1.com' },
+    (alt = 'profile picture'),
     { src: '/chat2.PNG', url: 'https://example2.com' },
+    (alt = 'profile picture'),
     { src: '/chat3.PNG', url: 'https://example3.com' },
+    (alt = 'profile picture'),
   ];
 
   useEffect(() => {
