@@ -1,28 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import chat1 from '../public/chat1.PNG';
+import josegee from '../public/josegee.png';
 
-const ImageSlider = () => {
-  const [index, setIndex] = useState(0);
-  const images = [
-    { src: '/chat1.PNG', url: 'https://example1.com' },
-    { src: '/chat2.PNG', url: 'https://example2.com' },
-    { src: '/chat3.PNG', url: 'https://example3.com' },
-  ];
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(intervalId);
-  }, []);
-
+const ImageWithOverlay = ({ src, alt, overlayText }) => {
   return (
-    <div>
-      <img
-        src={images[index].src}
-        onClick={() => window.open(images[index].url)}
-      />
+    <div className="relative pb-full">
+      <img src={chat1} className="rounded-lg object-cover w-full h-64" />
+      <div className="absolute bottom-0 left-0 w-full h-full bg-black opacity-0">
+        <div className="px-4 py-4 text-white text-center">
+          <h2 className="text-xl font-medium">{overlayText}</h2>
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-0 w-full h-full hover:opacity-75 cursor-pointer transition-opacity duration-300"></div>
     </div>
   );
 };
 
-export default ImageSlider;
+export default ImageWithOverlay;

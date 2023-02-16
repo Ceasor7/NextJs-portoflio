@@ -39,11 +39,8 @@ export default function Home() {
   const [index, setIndex] = useState(0);
   const images = [
     { src: '/chat1.PNG', url: 'https://example1.com' },
-    (alt = 'profile picture'),
     { src: '/chat2.PNG', url: 'https://example2.com' },
-    (alt = 'profile picture'),
     { src: '/chat3.PNG', url: 'https://example3.com' },
-    (alt = 'profile picture'),
   ];
 
   useEffect(() => {
@@ -94,43 +91,7 @@ export default function Home() {
               and design content needs using the Latest web technologies. Join
               me down below and let's get cracking!
             </p>
-            <div className="flex justify-center gap-16 text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl ">
-              <a href="mailto:josephkgateru@gmail.com">
-                {' '}
-                <AiFillMail className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
-                <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-                  Email
-                </span>
-              </a>
-              <a href="tel:0708234571">
-                {' '}
-                <AiFillPhone className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
-                <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-                  Call{' '}
-                </span>
-              </a>
-              <a href="https://twitter.com/JoseGee19">
-                {' '}
-                <AiFillTwitterCircle className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
-                <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-                  Twitter
-                </span>
-              </a>
-              <a href="https://www.linkedin.com/in/joseph-gateru-188909255/">
-                {' '}
-                <AiFillLinkedin className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce " />{' '}
-                <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-                  Linkedin
-                </span>
-              </a>
-              <a href="https://www.instagram.com/aj_kim_jnr/">
-                {' '}
-                <AiFillInstagram className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
-                <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-                  Instagram
-                </span>
-              </a>
-            </div>
+
             <div className=" flex justify-center mx-auto bg-gradient-to-b shadow-2xl from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-20 md:h-60 md:w-60">
               <Image
                 src={joseg}
@@ -138,6 +99,63 @@ export default function Home() {
                 objectFit="cover"
                 alt="profile picture"
               />
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="lg:flex gap-3">
+            <div className="text-center shadow-2xl p-10 rounded-xl my-10  dark:bg-white flex-1">
+              <form className="bg-white p-6 rounded-lg shadow-xl">
+                <h2 className="text-lg font-medium mb-4">Get in touch</h2>
+                <div className="mb-4">
+                  <label
+                    htmlFor="name"
+                    className="block font-medium text-gray-700 mb-2"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    className="w-full border border-gray-400 p-2 rounded-lg"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    htmlFor="email"
+                    className="block font-medium text-gray-700 mb-2"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    className="w-full border border-gray-400 p-2 rounded-lg"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    htmlFor="message"
+                    className="block font-medium text-gray-700 mb-2"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Enter your message"
+                    rows="4"
+                    className="w-full border border-gray-400 p-2 rounded-lg"
+                  />
+                </div>
+                <button className="bg-gradient-to-r from-cyan-500 text- to-teal-500  text-white px-4 py-2 border-none rounded-md ml-8 ">
+                  Send Email
+                </button>
+              </form>
             </div>
           </div>
         </section>
@@ -170,7 +188,7 @@ export default function Home() {
                 src={designing}
                 width={100}
                 height={100}
-                alt="Beuatiful dsigns"
+                alt="Beautiful Designs"
               />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Beautiful Design for your Web Application
@@ -272,20 +290,59 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <h3 className="text-2xl py-1 dark:text-white ">
-              Random thoughts site
-            </h3>
             <div className="lg:flex gap-3">
               <div className="text-center shadow-2xl p-10 rounded-xl my-10  dark:bg-white flex-1">
-                <h4>Click to view</h4>
+                <h3 className="text-2xl py-1 dark:text-black ">
+                  Random thoughts site
+                </h3>
                 <div>
                   <img
                     src={images[index].src}
                     onClick={() => window.open(images[index].url)}
+                    alt="project 1"
                   />
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section>
+          <div className="flex justify-center gap-16 text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl ">
+            <a href="mailto:josephkgateru@gmail.com">
+              {' '}
+              <AiFillMail className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
+              <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+                Email
+              </span>
+            </a>
+            <a href="tel:0708234571">
+              {' '}
+              <AiFillPhone className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
+              <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+                Call{' '}
+              </span>
+            </a>
+            <a href="https://twitter.com/JoseGee19">
+              {' '}
+              <AiFillTwitterCircle className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
+              <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+                Twitter
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/in/joseph-gateru-188909255/">
+              {' '}
+              <AiFillLinkedin className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce " />{' '}
+              <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+                Linkedin
+              </span>
+            </a>
+            <a href="https://www.instagram.com/aj_kim_jnr/">
+              {' '}
+              <AiFillInstagram className="text-md max-w-xl mx-auto md:text-xl cursor-pointer animate-bounce" />{' '}
+              <span className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+                Instagram
+              </span>
+            </a>
           </div>
         </section>
       </main>
