@@ -16,7 +16,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import useDownloader from 'react-use-downloader';
 import deployment from '../public/deployment.png';
 import support from '../public/support.png';
-import joseg from '../public/joseg.jpg';
+import joseg from '../public/joseg.JPG';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import Carousel from 'react-multi-carousel';
